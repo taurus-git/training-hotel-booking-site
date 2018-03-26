@@ -5,7 +5,6 @@
     url('../fonts/Nexa_Free_Bold-webfont.woff2') format('woff2'),
     url('../fonts/Nexa_Free_Bold-webfont.woff') format('woff'),
     url('../fonts/Nexa_Free_Bold-webfont.ttf') format('truetype');
-    url('')
     font-weight: normal;
     font-style: normal;
 }
@@ -37,7 +36,7 @@ header{
     background-image: url("../image/header-background.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-size: 100%;
+    background-size: cover;
     background-color: dimgray;
 }
 .header-nav{
@@ -58,13 +57,17 @@ header{
 }
 .header-menu li{
     display: inline-block;
+    
+    white-space: nowrap;
+}
+.header-menu a{
     margin-right: 35px;
     font-family: 'nexa_boldregular';
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 12px;
     line-height: 28px;
     color: #ffffff;
-    white-space: nowrap;
 }
 .header-menu .reservation{
     padding-top: 8px;
@@ -88,6 +91,7 @@ header{
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'nexa_boldregular';
+    line-height: 1.5;
 }
 .main-search-block{
     margin-top: 150px;
@@ -216,6 +220,9 @@ h2{
     background-position-y: 150px;
     background-position-x: 100px;
 }
+.promo-banner{
+    height: 640px;
+}
 .promo-banner-image,
 .promo-banner-text{
     display: inline-block;
@@ -243,11 +250,106 @@ h2{
     font-weight: 400;
 }
 /*slider-sizes*/
+/*input styling*/
+.slider-sizes input[type=range]{
+    width: 100%;
+}
+.slider-sizes input[type=range] {
+  -webkit-appearance: none;
+  margin: 35px 0 0 0;
+  width: 100%;
+}
+.slider-sizes  input[type=range]:focus {
+  outline: none;
+}
+.slider-sizes input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #95e7d1;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+.slider-sizes input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+.slider-sizes input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+.slider-sizes input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #95e7d1;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+.slider-sizes input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.slider-sizes input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.slider-sizes input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.slider-sizes input[type=range]::-ms-fill-upper {
+  background: #95e7d1;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.slider-sizes input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.slider-sizes input[type=range]:focus::-ms-fill-lower {
+  background: #95e7d1;
+}
+.slider-sizes input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
 .slider-sizes{
     min-height: 150px;
     background-color: #ffffff;
 }
 .slider-sizes-item{
+    margin-top: 0;
+    margin-bottom: 0;
     list-style: none;
 }
 .slider-sizes-item li{
@@ -282,6 +384,7 @@ h2{
     color: #ffffff;
 }
 .testimonials h4{
+    margin-top: 0;
     font-size: 30px;
     line-height: 35px;
     color: #ffffff;
@@ -320,28 +423,102 @@ h2{
     color: #ffffff;
     font-weight: 400;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media */
+@media screen and (max-width: 1140px) {
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .promo-item{
+        margin-bottom: 25px;
+        margin-left: 25px;
+    }
+    .promo-item:last-child{
+        margin-right: 25px;
+    }
+    .promo-banner-text{
+        margin-left: 500px;
+    }
+}
 @media screen and (max-width: 1024px) {
+    .promo-info-item{
+        height: 300px;
+        padding-top: 0px;
+        background-size: 200px;
+        background-position-y: 45px;
+        background-position-x: 25px;
+    }
+    .promo-banner{
+        height: auto;
+    }
+    .promo-banner-text {
+        margin-left: 250px;
+    }
+    .slider-sizes-item li {
+        margin-right: 95px;
+    }
+    .testimonials {
+        padding-top: 5px;
+    }
+    .testimonials h4 {
+        margin-bottom: 0;
+    }
+    .testimonials-item {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .testimonials-item:last-child{
+        margin-right: 25px;
+        margin-left: 25px;
+    }
 
 }
 @media screen and (max-width: 768px){
-
+    header {
+        height: 560px;
+    }
+    .container>h2{
+        margin-bottom: -20px;
+    }
+    main {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .promo-banner{
+        height: auto;
+    }
+    .promo-info-item{
+        height: auto;
+        padding-top: 80px;
+        background-size: 100px;
+        background-position-y: 10px;
+        background-position-x: 50%;
+        text-align: center;
+    }
+    .promo-banner-text {
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 400px
+    }
+    .promo-info h3 {
+        margin-bottom: -20px;
+    }
+    .slider-sizes-item{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .testimonials-item {
+        border-bottom: 1px dotted #ffffff;
+    }
 }
 @media screen and (max-width: 479px){
-
+    .promo-banner{
+        height: auto;
+    }
+    .promo-banner-text{
+        width: auto;
+    }
+    .slider-sizes-item li {
+        margin-right: 15px;
+    }
 }

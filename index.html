@@ -16,10 +16,10 @@
             <nav class="header-nav">
             <div class="big-logo"></div>
             <ul class="header-menu">
-                <li>About</li>
-                <li>Faq</li>
-                <li>Blog</li>
-                <li>Support</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Support</a></li>
                 <li>
                     <a href="#" class="reservation">Min bokning<span class="reservation-counter">1</span></a>
                 </li>
@@ -118,6 +118,14 @@
         </div>
         <div class="slider-sizes">
             <div class="container">
+                <input type="range" name="sizes" min="1" max="4" step="1">
+                <datalist id="sizes">
+                    <option value="xs" label="xs"></option>
+                    <option value="s" label="s"></option>
+                    <option value="m" label="m"></option>
+                    <option value="l" label="l"></option>
+
+                </datalist>
                 <ul class="slider-sizes-item">
                     <li>
                         <p class="slider-sizes-size">X-small</p>
@@ -179,7 +187,6 @@
                         <p>Dagens Industri</p>
                         <span class="review-date">17/8-2015</span>
                         </div>
-
                     </div>
                 </div>
             </div>
